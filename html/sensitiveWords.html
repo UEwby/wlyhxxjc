@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>敏感词汇</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+	<div class="header-wrap">
+    <div class="content">
+        <div class="login-box">
+        <span>
+            <i class="iconfont icon-yonghu"></i>
+            <a href="#" id="siteUserName">admin</a>
+        </span>
+            <span class="split">|</span>
+            <a href="#" id="loginOut">退出</a>
+        </div>
+        <div class="logo mll">
+
+        </div>
+        <ul class="nav mll">
+            <li>
+                <a href="./index.html">首页</a>
+            </li>
+            <li>
+                <a href="./query.html">数据查询</a>
+            </li>
+            <li>
+                <a href="./report.html">报告资料</a>
+            </li>
+            <li>
+                <a href="./sensitiveWords.html">敏感词库</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+	<div class="main">
+        <div class='main-content sensitiveWords'>
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline" style="width: 100%">
+                        <label class="layui-form-label">敏感词：</label>
+                        <div class="layui-input-inline gap" style="width: 330px;">
+                            <input type="text" id="txtKeywords" name="price_min" autocomplete="off" class="layui-input">
+                        </div>
+                        <label class="layui-form-label">所属分类：</label>
+                        <div class="layui-input-inline gap" style="width: 160px;" id="selectType">
+                            <select name="city" lay-verify="">
+                                <option value="0">全部</option>
+                                <option value="1">涉黄</option>
+                                <option value="2">涉毒</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline plm" style="width: 280px">
+                            <button class="btn-search mll" id="btn-search-Keywords"><i class="iconfont icon-inquiries"></i>查询</button>
+                            <button class="btn-reset mll"><i class="iconfont icon-zhongzhi"></i>重置</button>
+                        </div>
+                        <div class="fr" >
+                            <button class="btn-create mll" id="btnCreate"><i class="iconfont icon-add mrm"></i>新增关键词</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <table class="keyword-table" id="listContent"></table>
+                <div class="pageWrap clearfix">
+                    <div id="page" class="fr page"></div>
+                </div>
+                <div id="noData" class="no-dada" style="display: none;">
+                    <span class="bg"></span>
+                <span id="data" class="data">
+                    <span>没有数据</span>
+                </span>
+                </div>
+            </div>
+            <div id="addKeyWordModal" class="addKeyWordModal" style="display: none">
+                    <div class="title">
+                        新增关键词
+                        <span class="modal-close">×</span>
+                    </div>
+                    <form class="modal-content layui-form">
+                        <div class="mbl">
+                            <label>关键词：</label>
+                            <input type="text" class="input-txt" id="txtAddKeywords">
+                            <div class="err" id="txt-err">*关键词不能为空</div>
+                        </div>
+                        <div class="mbl pbl" id="modalTypeSelect">
+                            <label>归属类型：</label>
+                            <select name="city" lay-verify="">
+                                <option value="1">涉黄</option>
+                                <option value="2">涉毒</option>
+                            </select>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn-search mll" id="btn-SaveKeywords">确定</button>
+                            <button class="btn-reset mll btn-closeModal" >取消</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <script id="listTemplate" type="text/html">
+        <thead>
+        <tr>
+            <th style="width: 100px">序号</th>
+            <th>敏感词</th>
+            <th>所属类型</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{each data as value index}}
+        <tr>
+            <td>{{index | xx}}</td>
+            <td>{{value.text}}</td>
+            <td>{{value.type}}</td>
+            <td><a class="link-del" keyid="{{value.id}}">删除</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </script>
+
+    <div id="content">
+    </div>
+    <script id="test" type="text/html">
+        {{xx(n)}}
+    </script>
+    <div class="foot-wrap">
+    Copyright © Jusfoun.. All rights reserved
+</div>
+
+</body>
+</html>
+<script src="../Lib/jquery-1.12.4.min.js"></script>
+<script src="../Lib/layui/layui.js"></script>
+<script src="../Lib/template.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/sensitiveWords.js"></script>
+<script>
+</script>

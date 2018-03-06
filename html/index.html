@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>首页</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body class="index">
+	<div class="header-wrap">
+    <div class="content">
+        <div class="login-box">
+        <span>
+            <i class="iconfont icon-yonghu"></i>
+            <a href="#" id="siteUserName">admin</a>
+        </span>
+            <span class="split">|</span>
+            <a href="#" id="loginOut">退出</a>
+        </div>
+        <div class="logo mll">
+
+        </div>
+        <ul class="nav mll">
+            <li>
+                <a href="./index.html">首页</a>
+            </li>
+            <li>
+                <a href="./query.html">数据查询</a>
+            </li>
+            <li>
+                <a href="./report.html">报告资料</a>
+            </li>
+            <li>
+                <a href="./sensitiveWords.html">敏感词库</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div id="circlelist">
+        <div class="circle-box circle1">
+            <a class="circle"></a>
+            <div class="details-box">
+                <p><span>20502</span>条<br>中国</p>
+            </div>
+        </div>
+        <div class="circle-box circle2">
+            <a class="circle"></a>
+            <div class="details-box">
+                <p><span>20502</span>条<br>中国</p>
+            </div>
+        </div>
+        <div class="circle-box circle3">
+            <a class="circle"></a>
+            <div class="details-box">
+                <p><span>20502</span>条<br>中国</p>
+            </div>
+        </div>
+        <div class="circle-box circle4">
+            <a class="circle"></a>
+            <div class="details-box">
+                <p><span>20502</span>条<br>中国</p>
+            </div>
+        </div>
+        <div class="circle-box circle5">
+            <a class="circle"></a>
+            <div class="details-box">
+                <p><span>20502</span>条<br>中国</p>
+            </div>
+        </div>
+    </div>
+	<div class="search-wrap">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="txtkey" class="txt" value="请输入您想查询的关键字">
+        <button class="btn-search">查询</button>
+	</div>
+    <div class="window-wrap">
+        <div class="window-item-group data">
+            <div class="window-item" >
+                <div class="title">
+                    有害信息监测晴雨表
+                    <i class="iconfont icon-rilijiantouzuoshuang"></i>
+                </div>
+                <div class="item-content datatimeInfo">
+                    <p class="month">2017年 05月</p>
+                    <div class="month-day clearfix">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="min-state" style="display: none">
+                <i class="iconfont icon-rilijiantouyoushuang"></i>
+                有害信息监测晴雨表
+            </div>
+        </div>
+        <div class="window-item-group keywordsCloud">
+            <div class="window-item" >
+                <div class="title">
+                    有害信息敏感词云
+                    <i class="iconfont icon-rilijiantouzuoshuang"></i>
+                </div>
+                <div class="item-content">
+                    <canvas width="332" height="295" id="myCanvas" style=""></canvas>
+                </div>
+            </div>
+            <div class="min-state" style="display: none">
+                <i class="iconfont icon-rilijiantouyoushuang"></i>
+                有害信息敏感词云
+            </div>
+        </div>
+        <div class="window-item-group chartInfo">
+            <div class="window-item" >
+                <div class="title">
+                    网络有害信息占比情况
+                    <i class="iconfont icon-rilijiantouyoushuang"></i>
+                </div>
+                <div class="item-content" id="chartmain">
+
+                </div>
+            </div>
+            <div class="min-state" style="display: none">
+                <i class="iconfont icon-rilijiantouzuoshuang"></i>
+                网络有害信息占比情况
+            </div>
+        </div>
+        <div class="window-item-group dongtai">
+            <div class="window-item" >
+                <div class="title">
+                    有害信息监测动态
+                    <i class="iconfont icon-rilijiantouyoushuang"></i>
+                </div>
+                <div class="item-content">
+                    <div class="site-list" id="site-list">
+                        <ul id="site-list-content">
+                            <li>http://www.qjcpro.info<span>美国</span></li>
+                            <li>http://www.smxdj.com<span>中国</span></li>
+                            <li>http://lbjyhe.cn<span>美国</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="min-state" style="display: none">
+                <i class="iconfont icon-rilijiantouzuoshuang"></i>
+                有害信息监测动态
+            </div>
+        </div>
+    </div>
+    <div id="tags" style="display: none;">
+
+    </div>
+</body>
+</html>
+<script src="../Lib/jquery-1.12.4.min.js"></script>
+<script src="../Lib/layui/layui.js"></script>
+<script src="../Lib/template-web.js"></script>
+<script src="../Lib/echarts.common.min.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/tagcanvas.min.js"></script>
+<script src="../js/index.js"></script>
+<script>
+//	var data = {
+//		title : 'HELLO WORLD',
+//		isAdmin : true,
+//		list : ['新闻','军事','历史','政治']
+//	};
+//	var html = template('test', data);
+//	document.getElementById("content").innerHTML = html;
+</script>
